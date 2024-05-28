@@ -1,12 +1,12 @@
 # ETH PROOF: Beginner EVM Course
 
-This Solidity program is a simple "Create a token" program that demonstrates the basic syntax and functionality of the Solidity programming language. This contract is a simple implementation of a custom token called UniqueToken. It allows minting new tokens, burning existing tokens, and tracking balances of token holders.
+This Solidity program is a simple "Create a token" program that demonstrates the basic syntax and functionality of the Solidity programming language. This contract is a simple implementation of a custom token called ABHIToken. It allows minting new tokens, burning existing tokens, and tracking balances of token holders.
 
 ## Description
 
-### UniqueToken
+### ABHIToken
 
-UniqueToken is a custom ERC20-compatible token contract implemented in Solidity. It represents a token called "UniqueToken" with the abbreviation "UTK". The contract allows token minting and burning, and provides functionality to track token balances for different addresses.
+ABHIToken is a custom ERC20-compatible token contract implemented in Solidity. It represents a token called "ABHIToken" with the abbreviation "ATK". The contract allows token minting and burning, and provides functionality to track token balances for different addresses.
 
 #### Public Variables
 
@@ -31,16 +31,17 @@ This contract can be used as a starting point for creating and managing custom t
 
 To run this program, you can use Remix, an online Solidity IDE. To get started, go to the Remix website at [https://remix.ethereum.org/](https://remix.ethereum.org/).
 
-Once you are on the Remix website, create a new file by clicking on the left-hand sidebar. Save the file with a `.sol` extension (e.g., `uniqueToken.sol`). Copy and paste the following code into the file:
+Once you are on the Remix website, create a new file by clicking on the left-hand sidebar. Save the file with a `.sol` extension (e.g., `MyToken.sol`). Copy and paste the following code into the file:
 
 ```solidity
+
 // SPDX-License-Identifier: MIT
 pragma solidity 0.8.18;
 
-contract UniqueToken {
+contract MyToken {
     // Public variables to store the details about the coin
-    string public tokenName = "UniqueToken";
-    string public tokenAbbrv = "UTK";
+    string public tokenName = "ABHIToken";
+    string public tokenAbbrv = "ATK";
     uint256 public totalUserSupply;
 
     // Mapping to store user balances
@@ -64,11 +65,12 @@ contract UniqueToken {
         }
     }
 }
+
 ```
 
-To compile the code, click on the "Solidity Compiler" tab in the left-hand sidebar. Make sure the "Compiler" option is set to 0.8.18 or higher, and then click on the "Compile uniqueToken.sol" button.
+To compile the code, click on the "Solidity Compiler" tab in the left-hand sidebar. Make sure the "Compiler" option is set to 0.8.18 or higher, and then click on the "Compile MyToken.sol" button.
 
-Once the code is compiled, you can deploy the contract by clicking on the "Deploy & Run Transactions" tab in the left-hand sidebar. Select the "UniqueToken" contract from the dropdown menu, and then click on the "Deploy" button.
+Once the code is compiled, you can deploy the contract by clicking on the "Deploy & Run Transactions" tab in the left-hand sidebar. Select the "MyToken" contract from the dropdown menu, and then click on the "Deploy" button.
 
 Once the contract is deployed, you can interact with it by calling the following functions: `mint` function, `burn` function and also can check variables values like `userBalances`, `tokenName`, `tokenAbbrv`, `totalUserSupply`. To track token balances of addresses or perform token minting and burning, you have to write or copy-paste the sender's account address.
 
